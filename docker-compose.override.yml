@@ -2,6 +2,9 @@ version: '3.4'
 services:
   netbox: &netbox
     image: netboxcommunity/netbox:latest
+    restart: always
+    ports:
+      - "8000:8567"
     depends_on:
       postgres:
         condition: service_healthy
