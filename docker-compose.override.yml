@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   netbox: &netbox
-    image: IMAGE-netboxcommunity/netbox:latest
+    image: netboxcommunity/netbox:latest
     depends_on:
       postgres:
         condition: service_healthy
